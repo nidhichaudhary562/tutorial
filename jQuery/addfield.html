@@ -12,19 +12,19 @@
 <input type="text" name="input_field[]" value=""/>
 <a href="javascript:void(0);" class="add_input_button" title="Add field">add</a>
 </div>
-</div>
+ 
 </body>
 <script type="text/javascript">
 	$(document).ready(function() {
 		var max_fields = 10;
 		
-var add_input_button = $('.add_input_button');
+//var add_input_button = $('.add_input_button');
 
 var field_wrapper = $('.field_wrapper');
-var new_field_html = '<div><input type="text" name="input_field[]" value=""/><a href="javascript:void(0);" class="remove_input_button" title="Remove field">remove</a></div>';
+ var new_field_html = '<div><input type="text" name="input_field[]" value=""/><a href="javascript:void(0);" class="remove_input_button" title="Remove field">remove</a></div>';
 var input_count = 1;
 // Add button dynamically
-$(add_input_button).click(function(){
+$(".add_input_button").click(function(){
 if(input_count < max_fields){
 input_count++;
 $(field_wrapper).append(new_field_html);
