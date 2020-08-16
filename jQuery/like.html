@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>like js</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style type="text/css">
+	.likeaction{
+		color:green;
+	}
+
+	.dislikeaction{
+		color:red;
+	}
+</style>
+</head>
+<body> 
+
+<!-- <i class="fa fa-heart" style="font-size:48px"></i> -->
+Post 1
+<button class="like">Like</button>
+<button class="dislike">Dislike</button>
+<br>
+
+
+Post 2
+<button class="like">Like</button>
+<button class="dislike">Dislike</button>
+<br>
+
+
+Post 3
+<button class="like">Like</button>
+<button class="dislike">Dislike</button>
+<br>
+
+Post 4
+<button class="like">Like</button>
+<button class="dislike">Dislike</button>
+<br>
+ 
+<script type="text/javascript">
+$(document).ready(function() {
+	// $('.fa-heart').click(function(event) {
+	// 	if($('i').hasClass('like'))
+	// 	{
+	// 		// alert("yup");
+	// 		$('i').removeClass('like');
+	// 	}else{
+			 
+	// 		$('i').addClass('like');
+	// 	}
+	// });
+});
+
+$(document).on('click', '.like', function(event){
+	$(this).addClass('likeaction');
+});
+
+$(document).on('click', '.dislike', function(event){
+	$(this).addClass('dislikeaction');
+});
+</script>
+
+
+</body>
+</html> 
