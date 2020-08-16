@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>addfield js</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="field_wrapper">
+<div>
+<input type="text" name="input_field[]" value=""/>
+<a href="javascript:void(0);" class="add_input_button" title="Add field">add</a>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var max_fields = 10;
+		
+var add_input_button = $('.add_input_button');
+
+var field_wrapper = $('.field_wrapper');
+var new_field_html = '<div><input type="text" name="input_field[]" value=""/><a href="javascript:void(0);" class="remove_input_button" title="Remove field">remove</a></div>';
+var input_count = 1;
+// Add button dynamically
+$(add_input_button).click(function(){
+if(input_count < max_fields){
+input_count++;
+$(field_wrapper).append(new_field_html);
+}
+			
+		});
+// Remove dynamically added button
+$(field_wrapper).on('click', '.remove_input_button', function(e){
+e.preventDefault();
+$(this).parent('div').remove();
+input_count--;
+});
+});
+	
+</script>
+</html> 
