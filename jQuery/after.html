@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>after demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<h1>this is how my jaan works</h1>
+<p>I would like to say: </p>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('p').click(function(event) {
+			/* Act on the event */
+			$('h1').after(function(){
+				
+				return true;
+			});
+		});
+		
+	});
+</script>
+</body>
+</html>
